@@ -3,8 +3,6 @@ import '../styles/home.css';
 
 export default function Home (props) {
 
-    console.log(props)
-
     return (
         <>
             <Header />

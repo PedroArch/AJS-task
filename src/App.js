@@ -1,13 +1,18 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import Routes from './Routes'
 
+export default function App() {
+  const [users, setUsers] = useState([{name: "vini", email: "vini@mail.com"}])
 
+  function handleCadastrar (user) {
+    const newUsers = [...users, user];
 
-function App() {
+    setUsers(newUsers);
+    
+    console.log('Cadastrou');
+  }
 
   return (
-    <Routes />
+    <Routes users={users} cadastrar={handleCadastrar} />
   );
 }
-
-export default App;

@@ -2,14 +2,14 @@ import Header from '../components/Header';
 import {Row, Form, Col, Button} from 'react-bootstrap'
 import {useState} from "react";
 
-export default function Signup ({cadastrar, users}) {
-
+export default function Signup ({cadastrar}) {
 
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
 
     function handleSubmit () {
         const user = {name, email}
+       
         cadastrar(user);
     }
 
@@ -19,7 +19,7 @@ export default function Signup ({cadastrar, users}) {
             <div id="loginMain">
                 <h1>CADASTRAR</h1>
                 <Form>
-                    <Form.Group as={Row} controlId="formPlaintextEmail">
+                    <Form.Group as={Row} controlId="formPlaintextName">
                         <Form.Label column sm="2">
                         Nome
                         </Form.Label>
@@ -37,7 +37,7 @@ export default function Signup ({cadastrar, users}) {
                         </Col>
                     </Form.Group>
 
-                    <Form.Group as={Row} controlId="formPlaintextEmail">
+                    <Form.Group as={Row} controlId="formPlaintextConfirmEmail">
                         <Form.Label column sm="2">
                         Confirmar email
                         </Form.Label>
@@ -55,7 +55,7 @@ export default function Signup ({cadastrar, users}) {
                         </Col>
                     </Form.Group>
 
-                    <Form.Group as={Row} controlId="formPlaintextPassword">
+                    <Form.Group as={Row} controlId="formPlaintextConfirmPassword">
                         <Form.Label column sm="2">
                         Confirmar sua senha
                         </Form.Label>
