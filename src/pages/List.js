@@ -1,15 +1,15 @@
 import Header from '../components/Header';
 import {ListGroup} from 'react-bootstrap'
 
-export default function List ({users}) {
+export default function List (props) {
 
-    console.log(users)
+    console.log(props)
 
     return (
         <>
             <Header />
             <ListGroup>
-                {users.map(user => {
+                {props.users.map(user => {
                     return (
                         <ListGroup.Item key={user.email}>Name: {user.name} Email: {user.email}</ListGroup.Item>
                     )

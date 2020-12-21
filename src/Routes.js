@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {Switch, Route} from 'react-router-dom';
 import Home from './pages/Home'
 import List from './pages/List'
@@ -9,15 +9,26 @@ import Signup from './pages/Signup'
 
 const Routes = () => {
 
-    const [users, setUsers] = useState([{name: "vini", email: "vini@mail.com"}])
+    const [users, setUsers] = useState([{name: "vini", email: "vini@mail.com"}, {name: "Tiago", email: "tiago@mail.com"} ])
+
+    useEffect(() => {
+        console.log(users);   
+        
+    }, [users])
+
+    useEffect(() => {
+        console.log(users);   
+        
+    }, [])
+
+
 
     function handleCadastrar (user) {
-        setUsers(users.push(user));
-        console.log(users)
+
+        const newUsers = [...users, user]
+        setUsers(newUsers);
     }
 
-
-    
     return (
         <>
             <Switch>

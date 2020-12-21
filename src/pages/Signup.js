@@ -19,7 +19,7 @@ export default function Signup ({cadastrar, users}) {
             <div id="loginMain">
                 <h1>CADASTRAR</h1>
                 <Form>
-                    <Form.Group as={Row} controlId="formPlaintextEmail">
+                    <Form.Group as={Row} controlId="formPlaintextName">
                         <Form.Label column sm="2">
                         Nome
                         </Form.Label>
@@ -37,7 +37,7 @@ export default function Signup ({cadastrar, users}) {
                         </Col>
                     </Form.Group>
 
-                    <Form.Group as={Row} controlId="formPlaintextEmail">
+                    <Form.Group as={Row} controlId="formPlaintextEmail2">
                         <Form.Label column sm="2">
                         Confirmar email
                         </Form.Label>
@@ -55,7 +55,7 @@ export default function Signup ({cadastrar, users}) {
                         </Col>
                     </Form.Group>
 
-                    <Form.Group as={Row} controlId="formPlaintextPassword">
+                    <Form.Group as={Row} controlId="formPlaintextPassword2">
                         <Form.Label column sm="2">
                         Confirmar sua senha
                         </Form.Label>
